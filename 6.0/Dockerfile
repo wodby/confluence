@@ -2,7 +2,7 @@ FROM cptactionhank/atlassian-confluence:6.0.7
 
 USER root
 
-RUN apt-get install gosu && chown -R daemon:daemon $CONF_INSTALL
+RUN apt-get install gosu
 
 COPY docker-confluence-entrypoint.sh /
 

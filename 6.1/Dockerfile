@@ -1,10 +1,10 @@
 FROM cptactionhank/atlassian-confluence:6.1.1
 
-COPY docker-confluence-entrypoint.sh /
-
 USER root
 
 RUN apt-get install gosu
+
+COPY docker-confluence-entrypoint.sh /
 
 ENTRYPOINT ["/docker-confluence-entrypoint.sh"]
 
