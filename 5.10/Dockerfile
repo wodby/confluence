@@ -9,7 +9,7 @@ ENV CONF_DOWNLOAD_URL https://www.atlassian.com/software/confluence/downloads/bi
 ENV JAVA_CACERTS $JAVA_HOME/jre/lib/security/cacerts
 ENV CERTIFICATE $CONF_HOME/certificate
 
-RUN set -ex \
+RUN set -ex && \
     apk add --update bash curl libressl su-exec tar tomcat-native xmlstarlet && \
     mkdir -p "${CONF_HOME}" && chmod -R 700 "${CONF_HOME}" && \
     chown daemon:daemon "${CONF_HOME}" && mkdir -p "${CONF_INSTALL}/conf" && \
