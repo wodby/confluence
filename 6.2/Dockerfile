@@ -2,7 +2,7 @@ FROM openjdk:8-alpine
 
 ENV CONF_HOME /var/atlassian/confluence
 ENV CONF_INSTALL /opt/atlassian/confluence
-ENV CONF_VERSION 6.1.3
+ENV CONF_VERSION 6.2.0
 
 ENV CONF_DOWNLOAD_URL https://www.atlassian.com/software/confluence/downloads/binary/atlassian-confluence-${CONF_VERSION}.tar.gz
 

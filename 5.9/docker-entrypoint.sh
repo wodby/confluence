@@ -9,7 +9,7 @@ fi
 chown daemon:daemon /var/atlassian/confluence
 
 if [[ -n "${JIRA_HOST}" ]]; then
-    jre="/usr/lib/jvm/java-8-openjdk-amd64/jre"
+    jre="/usr/lib/jvm/java-1.8-openjdk/jre"
 
     if [[ -z "${JIRA_PORT}" ]]; then
         JIRA_PORT=443
@@ -22,4 +22,4 @@ if [[ -n "${JIRA_HOST}" ]]; then
     rm /tmp/cert.pem
 fi
 
-gosu daemon /docker-entrypoint.sh "${@}"
+su-exec daemon "${@}"
