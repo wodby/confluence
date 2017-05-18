@@ -3,8 +3,7 @@
 [![Build Status](https://travis-ci.org/wodby/confluence.svg?branch=master)](https://travis-ci.org/wodby/confluence)
 [![Docker Pulls](https://img.shields.io/docker/pulls/wodby/confluence.svg)](https://hub.docker.com/r/wodby/confluence)
 [![Docker Stars](https://img.shields.io/docker/stars/wodby/confluence.svg)](https://hub.docker.com/r/wodby/confluence)
-
-[![Wodby Slack](https://www.google.com/s2/favicons?domain=www.slack.com) Join us on Slack](https://slack.wodby.com/)
+[![Wodby Slack](http://slack.wodby.com/badge.svg)](http://slack.wodby.com)
 
 ## Supported tags and respective `Dockerfile` links:
 
@@ -14,6 +13,6 @@
 - [`5.10`, (*5.10/Dockerfile*)](https://github.com/wodby/confluence/tree/master/5.10/Dockerfile)
 - [`5.9`, (*5.9/Dockerfile*)](https://github.com/wodby/confluence/tree/master/5.9/Dockerfile)
 
-## Using in Production
+## Using in production
 
-Deploy Confluence container with HTTPs to your own server via [![Wodby](https://www.google.com/s2/favicons?domain=wodby.com) Wodby](https://wodby.com).
+Deploy Confluence to your own server via [![Wodby](https://www.google.com/s2/favicons?domain=wodby.com) Wodby](https://wodby.com).
