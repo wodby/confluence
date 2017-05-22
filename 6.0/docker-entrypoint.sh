@@ -18,7 +18,7 @@ else
 
         url="${JIRA_HOST}:${JIRA_PORT}"
         openssl s_client -connect "${url}"  < /dev/null | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > /tmp/cert.pem
-        "${JAVA_HOME}/bin/keytool" -import -alias jira -trustcacerts -keystore "${JAVA_HOME}/lib/security/cacerts" \
+        "${JAVA_HOME}/jre/bin/keytool" -import -alias jira -trustcacerts -keystore "${JAVA_HOME}/jre/lib/security/cacerts" \
             -file /tmp/cert.pem -storepass changeit -noprompt
         rm /tmp/cert.pem
     fi
