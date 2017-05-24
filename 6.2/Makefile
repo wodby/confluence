@@ -1,9 +1,9 @@
 -include env_make
 
-VERSION ?= 6.2
+VERSION ?= 6.0
 
 REPO = wodby/confluence
-NAME = confluence-6.2
+NAME = confluence-6.0
 
 .PHONY: build test push shell run start stop logs clean release
 

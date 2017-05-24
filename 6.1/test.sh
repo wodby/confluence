@@ -13,7 +13,7 @@ cid="$(docker run -d --name "${name}" "${image}")"
 trap "docker rm -vf $cid > /dev/null" EXIT
 
 confluence() {
-	docker run --rm -i --link "${name}":"confluence" "${image}" "${@}" host="confluence"
+	docker run --rm -i --link "${name}":"confluence" "${image}" "${@}"
 }
 
-confluence make check-ready wait_seconds=5 max_try=12 delay_seconds=5
+confluence make check-ready wait_seconds=5 max_try=12 delay_seconds=5 host="confluence"
