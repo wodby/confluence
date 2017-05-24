@@ -1,4 +1,4 @@
-FROM openjdk:8-alpine
+FROM openjdk:8-jre-alpine
 
 ENV CONF_HOME /var/atlassian/confluence
 ENV CONF_INSTALL /opt/atlassian/confluence
@@ -6,7 +6,7 @@ ENV CONF_VERSION 6.0.7
 
 ENV CONF_DOWNLOAD_URL https://www.atlassian.com/software/confluence/downloads/binary/atlassian-confluence-${CONF_VERSION}.tar.gz
 
-ENV JAVA_CACERTS $JAVA_HOME/jre/lib/security/cacerts
+ENV JAVA_CACERTS $JAVA_HOME/lib/security/cacerts
 ENV CERTIFICATE $CONF_HOME/certificate
 
 RUN set -ex && \
