@@ -18,6 +18,8 @@ importJiraKeys() {
     rm /tmp/cert.pem
 }
 
+gotpl "/etc/gotpl/server.xml.tpl" > "/opt/atlassian/confluence/conf/server.xml"
+
 if [[ "${1}" == 'make' ]]; then
     su-exec daemon "${@}" -f /usr/local/bin/actions.mk
 else

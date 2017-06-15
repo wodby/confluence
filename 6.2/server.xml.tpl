@@ -1,7 +1,22 @@
 <?xml version="1.0"?>
 <Server port="8000" shutdown="SHUTDOWN">
     <Service name="Tomcat-Standalone">
-        <Connector port="8090" connectionTimeout="20000" redirectPort="8443" maxThreads="48" minSpareThreads="10" enableLookups="false" acceptCount="10" URIEncoding="UTF-8" protocol="org.apache.coyote.http11.Http11NioProtocol"/>
+        <Connector
+            port="8090"
+            connectionTimeout="20000"
+            redirectPort="8443"
+            maxThreads="48"
+            minSpareThreads="10"
+            enableLookups="false"
+            acceptCount="10"
+            URIEncoding="UTF-8"
+            protocol="org.apache.coyote.http11.Http11NioProtocol"
+            {{ if getenv "CONF_PROXY_DOMAIN" }}
+            proxyName="{{ getenv "CONF_PROXY_DOMAIN" }}"
+            proxyPort="{{ getenv "CONF_PROXY_PORT" "80" }}"
+            scheme="{{ getenv "CONF_PROXY_SCHEME" "http" }}"
+            {{ end }}
+        />
         <Engine name="Standalone" defaultHost="localhost">
             <Host name="localhost" appBase="webapps" unpackWARs="true" autoDeploy="false" startStopThreads="4">
                 <Context path="" docBase="../confluence" reloadable="false" useHttpOnly="true">

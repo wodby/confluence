@@ -11,6 +11,16 @@
 - [`6.1`, (*6.1/Dockerfile*)](https://github.com/wodby/confluence/tree/master/6.1/Dockerfile)
 - [`6.0`, (*6.0/Dockerfile*)](https://github.com/wodby/confluence/tree/master/6.0/Dockerfile)
 
-## Using in production
+## Environment variables available for customization
+
+| Environment Variable | Default Value | Description |
+| -------------------- | ------------- | ----------- |
+| CONF_PROXY_DOMAIN |     | |
+| CONF_PROXY_PORT   |     | |
+| CONF_PROXY_SCHEME |     | |
+| JIRA_HOST         |     | |
+| JIRA_PORT         | 443 | |
+
+## Deployment
 
 Deploy Confluence to your own server via [![Wodby](https://www.google.com/s2/favicons?domain=wodby.com) Wodby](https://wodby.com).
